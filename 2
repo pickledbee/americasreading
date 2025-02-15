@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trends in Reading Achievement in US Public Schools</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      color: #1a237e;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #1a237e;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .infographic {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section:nth-child(odd) {
+      background: #e8eaf6;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .chart {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .sources {
+      background: #c5cae9;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+    .sources a {
+      color: #283593;
+      text-decoration: none;
+    }
+    .sources a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="infographic">
+    <h1 class="fade-in">Evolving Trends in Reading Achievement</h1>
+    
+    <div class="section fade-in" style="animation-delay: 0.3s;">
+      <h2>Post-Pandemic Setbacks</h2>
+      <p>
+        The COVID-19 pandemic (2020–2022) triggered extensive disruptions in learning environments, causing dramatic declines in reading scores—especially among fourth- and eighth-graders. In many urban areas, scores fell by 6 to 16 points, with further drops continuing into 2024.
+      </p>
+      <div class="chart">
+        <canvas id="chart1"></canvas>
+      </div>
+    </div>
+
+    <div class="section fade-in" style="animation-delay: 0.6s;">
+      <h2>Demographic Disparities</h2>
+      <p>
+        Racial and socioeconomic factors have intensified existing achievement gaps. Black and Hispanic students have seen steeper declines compared to their peers, while students from low-income households have faced limited access to essential learning resources.
+      </p>
+      <div class="chart">
+        <canvas id="chart2"></canvas>
+      </div>
+    </div>
+
+    <div class="section fade-in" style="animation-delay: 0.9s;">
+      <h2>Policy and Intervention Responses</h2>
+      <p>
+        In response, many states adopted science-of-reading reforms emphasizing evidence-based phonics and enhanced teacher training. For example, Louisiana's comprehensive literacy reforms helped recover some reading scores, despite the overall national decline.
+      </p>
+      <div class="chart">
+        <canvas id="chart3"></canvas>
+      </div>
+    </div>
+
+    <div class="section fade-in" style="animation-delay: 1.2s;">
+      <h2>Long-Term Trends & Interrupted Progress</h2>
+      <p>
+        Although reading scores had plateaued prior to the pandemic, underlying issues such as curriculum misalignment and inadequate teacher preparation had long been in play. Past gains in reducing achievement gaps have been eroded in the wake of recent setbacks.
+      </p>
+      <div class="chart">
+        <canvas id="chart4"></canvas>
+      </div>
+    </div>
+
+    <div class="section fade-in" style="animation-delay: 1.5s;">
+      <h2>Pathways to Equitable Recovery</h2>
+      <p>
+        A strategic recovery will require robust tutoring, improved literacy training, and focused attendance initiatives. Investments in early childhood education and comprehensive community support are essential for rebuilding an equitable education system.
+      </p>
+      <p>
+        One innovative solution is the <strong>Reading Connections Method</strong>, which focuses on a multisensory, sequential phonics approach. This method addresses core literacy skills and has a proven track record of teaching almost anyone to read, spell, and comprehend effectively. By integrating brain-based research with practical strategies, Reading Connections targets learned helplessness and builds confidence in students.
+      </p>
+      <p>
+        Reading Connections provides comprehensive support for children aged 4 to 17, empowering educators and students with tools to succeed. It emphasizes phonics, fluency, and comprehension using visual, auditory, and kinesthetic techniques. With personalized instruction and ongoing assessments, it offers a scalable model for schools aiming to close achievement gaps.
+      </p>
+      <p>
+        <strong>Contact Reading Connections Inc.</strong><br>
+        Email: <a href="mailto:rickb@rcinc.org">rickb@rcinc.org</a><br>
+        Phone: 920-544-5115<br>
+        Website: <a href="https://rcinc.org" target="_blank">rcinc.org</a>
+      </p>
+      <div class="chart">
+        <canvas id="chart5"></canvas>
+      </div>
+    </div>
+
+    <div class="sources fade-in" style="animation-delay: 1.8s;">
+      <h3>Sources</h3>
+      <ul>
+        <li><a href="https://www.nationsreportcard.gov/highlights/reading/2022/" target="_blank">NAEP 2022 Reading Highlights</a></li>
+        <li><a href="https://www.edweek.org/leadership/reading-scores-fall-to-new-low-on-naep-fueled-by-declines-for-struggling-students/2025/01" target="_blank">Education Week: Reading Scores Fall to New Low</a></li>
+        <li><a href="https://www.chalkbeat.org/2025/01/29/naep-reading-scores-decline-and-struggling-students-fall-behind/" target="_blank">Chalkbeat: NAEP Reading Scores Decline</a></li>
+        <li><a href="https://www.nationsreportcard.gov/reports/reading/2024/g4_8/state-district-trends/?grade=8" target="_blank">NAEP State & District Trends 2024</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const data1 = {
+        labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
+        datasets: [{
+          label: "Reading Scores Trend",
+          data: [240, 238, 230, 225, 220, 215],
+          backgroundColor: "rgba(26, 35, 126, 0.5)",
+          borderColor: "#1a237e",
+          borderWidth: 1
+        }]
+      };
+      const options = { responsive: true, maintainAspectRatio: false };
+      new Chart(document.getElementById('chart1').getContext('2d'), { type: 'line', data: data1, options });
+      
+      const data2 = {
+        labels: ["Black", "Hispanic", "White", "Asian", "Other"],
+        datasets: [{
+          label: "Demographic Disparity",
+          data: [60, 70, 85, 90, 75],
+          backgroundColor: ["#f44336", "#ff9800", "#4caf50", "#2196f3", "#9c27b0"]
+        }]
+      };
+      new Chart(document.getElementById('chart2').getContext('2d'), { type: 'bar', data: data2, options });
+
+      // Add additional chart data and configurations for chart3, chart4, and chart5 as needed.
+    });
+  </script>
+</body>
+</html>
